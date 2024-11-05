@@ -1,0 +1,316 @@
+*{
+    margin: 0px;
+}
+header{
+    background-color: white;
+}
+.topbox{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 21px;
+}
+.container-topbox{
+    height: 179px;
+    display: flex;
+    justify-content: flex-start;
+}
+.container-topbox .mainlogo{
+   padding-left: 70px;
+}
+
+.logo{
+    /* line-height: 105%; */
+    min-height: 90px;
+    padding: 30px 15px 30px 30px;
+    /* text-transform: uppercase; */
+}
+.text{
+   padding: 30px 30px 30px 0px;
+}
+.text strong{
+    font-size: 30px;
+}
+
+.text p{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.text span{
+    font-size: 25px; 
+}
+.maintext{
+   padding: 30px 30px 30px 0px;
+}
+.maintext strong{
+    font-size: 30px;
+}
+
+.maintext p{
+    font-size: 25px;
+}
+.maintext span{
+    font-size: 25px; 
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+.top-content{
+    width: 32%;
+    font-family: "Poppins", system-ui;
+    font-size: 15px;
+    padding: 50px 0px;
+}
+/* bo1 and bo2 for sidebox of PM Modi */
+.bo1{
+   border: 2px solid red;
+   width: 36px;
+}
+
+.bo2{
+    border: 2px solid red;
+    width: 36px;
+    }
+
+.insidebox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* after the line we have navbar */
+
+.line{
+    border: 2px solid black;
+    width: 99%;
+    display: flex;
+    margin: auto;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+   list-style: none;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-style: normal;
+    padding: 15px;
+  }
+  .navbar a{
+    text-decoration: none;
+  }
+   
+  .mainlogo > img{
+    padding-top: 15px;
+} 
+.mainlogo{
+    padding: 0px 15px 20px 0px;
+}
+.maintext > p{ 
+    padding-top: 10px;
+}
+/* overview box style */
+
+.overview{
+    background-color: #83B7F6;
+    color: black;
+}
+
+.overview h1{
+    padding: 30px;
+    font-family: "poppins";
+    font-size: 40px;
+    text-align: center;
+}
+.overview p{
+    font-family: "poppins";
+    font-size: 18px;
+    padding: 30px;
+}
+/* middle content of this page */
+
+.bg{
+   padding: 40px 0px;
+}
+.bg2{
+   padding: 40px 0px;
+}
+
+.title h1{
+    margin-left: 25%;
+    width: 50%;
+    font-family: "poppins";
+    text-align: center;
+}
+
+.content_mid{
+    display: flex;
+}
+.right1{
+    width: 50%;
+    margin: 40px;
+}
+
+.right11 h2{
+    font-size: 28px;
+    padding: 10px;
+    font-family: "poppins";
+}
+.right11 p{
+    font-size: 16px;
+    padding: 10px;
+    font-family: "poppins";
+}
+.right12 h2{
+    font-size: 28px;
+    padding: 10px;
+    font-family: "poppins";
+}
+.right12 p,ul{
+    font-size: 16px;
+    padding: 10px;
+    font-family: "poppins";
+}
+
+.bg{
+    background-color: #B3BD7A;
+}
+
+.btn1:hover{
+    background-color: #B3BD7A;
+    color: black;
+}
+.btn2:hover{
+    background-color: #B3BD7A;
+    color: black;
+}
+
+.bg2{
+    background-color: #F7E6B8;
+}
+
+.title h1{
+    color: #BE3A3B;
+    box-shadow: 0 0 5px blue;
+}
+
+/* trial code */
+/* Container for the card */
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the card */
+    align-items: center; /* Vertically center the card */
+    height: 100vh; /* Set container height to full viewport height */
+    background-color: #f4f4f4; /* Optional: Set a background color for the container */
+  }
+  
+  /* Card container */
+  .card {
+    margin-left: 10%;
+    margin-top: 35px;
+    width: 350px; /* Set card width */
+    height: 350px; /* Set card height */
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Position relative to keep elements within the card */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+  }
+  
+  /* Image container */
+  .image-container {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the entire card */
+    transition: transform 0.5s ease; /* Smooth image movement */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Image styling */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image covers the container without any gaps */
+  }
+  
+  /* Text box */
+  .text-box {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding fits within the card */
+    position: absolute;
+    bottom: -100%; /* Hide text completely off-screen initially */
+    transition: bottom 0.5s ease; /* Smooth text movement */
+  }
+  
+  /* Hover effects */
+  .card:hover .image-container {
+    transform: translateY(-50px); /* Move the image upwards slightly */
+  }
+  
+  .card:hover .text-box {
+    bottom: 0; /* Bring text box fully into view */
+  }
+  
+  /* Card hover shadow effect */
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+  }
+
+/* button is added style */
+.btn h5{
+    font-family: "poppins";
+}
+
+.btn1{
+    margin: 10px;
+    padding: 5px 0px;
+    border: 2px solid black;
+}
+
+.btn2{
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+  
+  /* footer style */
+.secondpart{
+    height: 180px;
+}
+
+.section-one ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 50px 0px;
+}
+
+.section-one > ul >a{
+    text-decoration: none;
+}
+
+.section-one li{
+    padding: 10px;
+    font-family: "poppins";
+    color: grey;
+   
+}
+
+#spl_logo{
+    border-radius: 110px;
+}
+
+.section-two{
+    display: flex;
+    justify-content: center;
+}
+
+.section-two img{
+    margin: 15px;
+}

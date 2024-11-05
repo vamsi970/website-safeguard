@@ -1,0 +1,215 @@
+*{
+    margin: 0px;
+}
+header{
+    background-color: white;
+}
+.topbox{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 21px;
+}
+.container-topbox{
+    height: 179px;
+    display: flex;
+    justify-content: flex-start;
+}
+.container-topbox .mainlogo{
+   padding-left: 70px;
+}
+
+.logo{
+    /* line-height: 105%; */
+    min-height: 90px;
+    padding: 30px 15px 30px 30px;
+    /* text-transform: uppercase; */
+}
+.text{
+   padding: 30px 30px 30px 0px;
+}
+.text strong{
+    font-size: 30px;
+}
+
+.text p{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.text span{
+    font-size: 25px; 
+}
+.maintext{
+   padding: 30px 30px 30px 0px;
+}
+.maintext strong{
+    font-size: 30px;
+}
+
+.maintext p{
+    font-size: 25px;
+}
+.maintext span{
+    font-size: 25px; 
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+.top-content{
+    width: 32%;
+    font-family: "Poppins", system-ui;
+    font-size: 15px;
+    padding: 50px 0px;
+}
+
+
+.mainlogo > img{
+    padding-top: 15px;
+} 
+.mainlogo{
+    padding: 0px 15px 20px 0px;
+}
+.maintext > p{
+    padding-top: 10px;
+}
+
+/* bo1 and bo2 for sidebox of PM Modi */
+.bo1{
+   border: 2px solid red;
+   width: 36px;
+}
+
+.bo2{
+    border: 2px solid red;
+    width: 36px;
+    }
+
+.insidebox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* after the line we have navbar */
+
+.line{
+    border: 2px solid black;
+    width: 99%;
+    display: flex;
+    margin: auto;
+}
+
+.navbar1 ul{
+    display: flex;
+    justify-content: space-around;
+   list-style: none;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-style: normal;
+    padding: 15px;
+  }
+  .navbar1 a{
+    color: blueviolet;
+    text-decoration: none;
+  }
+
+  .content{
+    background-image: url("/pic1.jpg");
+    background-color: #374176;
+    background-repeat: no-repeat;
+    height: 300px;
+    object-fit:contain;
+    background-position: center center;
+    background-size: max(1200px , 100vw);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* opacity: 0.7; */
+    
+}
+
+.feedback{
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "poppins";
+    margin: 0px;
+}
+
+.feedback_card h1{
+   padding: 20px;
+   text-align: center;
+}
+.form-la{
+    /* text-align: center; */
+    padding: 20px 0px;
+    width: 180px;
+}
+.textarea{
+    margin-left: 180px;
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feedback_card{
+    background-color: wheat;
+    border-radius: 8px;
+    width: 40%;
+}
+
+.but{
+   margin: 25px;
+   padding-left: 40% ;
+}
+
+
+.fm-control{
+    border-radius: 6px;
+    color: red;
+    text-align: center;
+}
+
+/* footer style */
+
+.secondpart{
+    height: 180px;
+}
+
+.section-one ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 50px 0px;
+}
+
+.section-one > ul >a{
+    text-decoration: none;
+}
+
+.section-one li{
+    padding: 10px;
+    font-family: "poppins";
+    color: grey;
+   
+}
+
+#spl_logo{
+    border-radius: 110px;
+}
+
+.section-two{
+    display: flex;
+    justify-content: center;
+}
+
+.section-two img{
+    margin: 15px;
+}
+
+
+
+

@@ -1,0 +1,60 @@
+.submit{
+   text-align: center;
+}
+
+.submit h1{
+    padding-top: 50px;
+    font-family: "poppins";
+    font-size: 40px;
+}
+
+.submit img{
+    width: 120px;
+}
+
+.submit p{
+    padding: 10px 40px 0px 40px;
+    font-size: 16px;
+    font-family: "poppins";
+}
+
+.submit a{
+    text-decoration: none;
+}
+
+/* Footer style */
+
+.secondpart{
+    height: 180px;
+}
+
+.section-one ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 50px 0px;
+}
+
+.section-one > ul >a{
+    text-decoration: none;
+}
+
+.section-one li{
+    padding: 10px;
+    font-family: "poppins";
+    color: grey;
+   
+}
+
+#spl_logo{
+    border-radius: 110px;
+}
+
+.section-two{
+    display: flex;
+    justify-content: center;
+}
+
+.section-two img{
+    margin: 15px;
+}

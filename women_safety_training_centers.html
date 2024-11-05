@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Centers for Women’s Safety</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #374176;
+        }
+        #map {
+            height: 500px;
+            width: 100%;
+            border: 2px solid #374176;
+            border-radius: 5px;
+        }
+        ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Space between items */
+}
+
+li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+        li:hover {
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Training Centers for Women’s Safety</h1>
+    <p>The following are the 64 training centers implemented by the Safeguard team for the welfare of women's safety training:</p>
+    <p>Click on the Training center and see that location in the Map below</p>
+    <ul id="center-list">
+        <li>Delhi Training Center</li>
+        <li>Mumbai Training Center</li>
+        <li>Bengaluru Training Center</li>
+        <li>Kolkata Training Center</li>
+        <li>Chennai Training Center</li>
+        <li>Hyderabad Training Center</li>
+        <li>Ahmedabad Training Center</li>
+        <li>Pune Training Center</li>
+        <li>Tirupati Training Center</li>
+        <li>Jaipur Training Center</li>
+        <li>Lucknow Training Center</li>
+        <li>Bhopal Training Center</li>
+        <li>Patna Training Center</li>
+        <li>Vadodara Training Center</li>
+        <li>Indore Training Center</li>
+        <li>Coimbatore Training Center</li>
+        <li>Surat Training Center</li>
+        <li>Nashik Training Center</li>
+        <li>Nagpur Training Center</li>
+        <li>Visakhapatnam Training Center</li>
+        <li>Mysuru Training Center</li>
+        <li>Kochi Training Center</li>
+        <li>Rajkot Training Center</li>
+        <li>Aurangabad Training Center</li>
+        <li>Agra Training Center</li>
+        <li>Srinagar Training Center</li>
+        <li>Dehradun Training Center</li>
+        <li>Guwahati Training Center</li>
+        <li>Raipur Training Center</li>
+        <li>Ranchi Training Center</li>
+        <li>Bhubaneswar Training Center</li>
+        <li>Agartala Training Center</li>
+        <li>Jodhpur Training Center</li>
+        <li>Amritsar Training Center</li>
+        <li>Gwalior Training Center</li>
+        <li>Vijayawada Training Center</li>
+        <li>Kozhikode Training Center</li>
+        <li>Kota Training Center</li>
+        <li>Bareilly Training Center</li>
+        <li>Thiruvananthapuram Training Center</li>
+        <li>Udaipur Training Center</li>
+        <li>Tirunelveli Training Center</li>
+        <li>Shimla Training Center</li>
+        <li>Bikaner Training Center</li>
+        <li>Sagar Training Center</li>
+        <li>Khandwa Training Center</li>
+        <li>Rourkela Training Center</li>
+        <li>Malappuram Training Center</li>
+        <li>Kolhapur Training Center</li>
+        <li>Durg Training Center</li>
+        <li>Bardhaman Training Center</li>
+        <li>Puducherry Training Center</li>
+        <li>Dimapur Training Center</li>
+        <li>Kohima Training Center</li>
+        <li>Itanagar Training Center</li>
+        <li>Gangtok Training Center</li>
+        <li>Aizawl Training Center</li>
+        <li>Imphal Training Center</li>
+        <li>Port Blair Training Center</li>
+        <li>Panchkula Training Center</li>
+        <li>Jammu Training Center</li>
+    </ul>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Create a map centered on India
+        var map = L.map('map').setView([20.5937, 78.9629], 5);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Define custom icons
+        var defaultIcon = L.icon({
+            iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+            shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        var highlightedIcon = L.icon({
+            iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png', // A larger icon or you can customize
+            shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+            iconSize: [30, 46],
+            iconAnchor: [15, 46],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        // Training center locations
+        var centers = [
+            { name: "Delhi Training Center", lat: 28.6139, lng: 77.2090 },
+            { name: "Mumbai Training Center", lat: 19.0760, lng: 72.8777 },
+            { name: "Bengaluru Training Center", lat: 12.9716, lng: 77.5946 },
+            { name: "Kolkata Training Center", lat: 22.5726, lng: 88.3639 },
+            { name: "Chennai Training Center", lat: 13.0827, lng: 80.2707 },
+            { name: "Hyderabad Training Center", lat: 17.3850, lng: 78.4867 },
+            { name: "Ahmedabad Training Center", lat: 23.0225, lng: 72.5714 },
+            { name: "Pune Training Center", lat: 18.5204, lng: 73.8567 },
+            { name: "Tirupati Training Center", lat: 13.6288, lng: 79.4192 },
+            { name: "Jaipur Training Center", lat: 26.9124, lng: 75.7873 },
+            { name: "Lucknow Training Center", lat: 26.8467, lng: 80.9462 },
+            { name: "Bhopal Training Center", lat: 23.2599, lng: 77.4126 },
+            { name: "Patna Training Center", lat: 25.5941, lng: 85.1376 },
+            { name: "Vadodara Training Center", lat: 22.3072, lng: 73.1812 },
+            { name: "Indore Training Center", lat: 22.7197, lng: 75.8573 },
+            { name: "Coimbatore Training Center", lat: 11.0168, lng: 76.9558 },
+            { name: "Surat Training Center", lat: 21.1702, lng: 72.8311 },
+            { name: "Nashik Training Center", lat: 19.9975, lng: 73.7898 },
+            { name: "Nagpur Training Center", lat: 21.1458, lng: 79.0882 },
+            { name: "Visakhapatnam Training Center", lat: 17.6884, lng: 83.2185 },
+            { name: "Mysuru Training Center", lat: 12.2958, lng: 76.6396 },
+            { name: "Kochi Training Center", lat: 9.9312, lng: 76.2673 },
+            { name: "Rajkot Training Center", lat: 22.3039, lng: 70.8022 },
+            { name: "Aurangabad Training Center", lat: 19.8762, lng: 75.3433 },
+            { name: "Agra Training Center", lat: 27.1767, lng: 78.0081 },
+            { name: "Srinagar Training Center", lat: 34.0836, lng: 74.7973 },
+            { name: "Dehradun Training Center", lat: 30.3165, lng: 78.0322 },
+            { name: "Guwahati Training Center", lat: 26.1445, lng: 91.7362 },
+            { name: "Raipur Training Center", lat: 21.2514, lng: 81.6292 },
+            { name: "Ranchi Training Center", lat: 23.3567, lng: 85.3348 },
+            { name: "Bhubaneswar Training Center", lat: 20.2961, lng: 85.8189 },
+            { name: "Agartala Training Center", lat: 23.8359, lng: 91.2705 },
+            { name: "Jodhpur Training Center", lat: 26.2389, lng: 73.0243 },
+            { name: "Amritsar Training Center", lat: 31.6340, lng: 74.8723 },
+            { name: "Gwalior Training Center", lat: 26.2183, lng: 78.1828 },
+            { name: "Vijayawada Training Center", lat: 16.5062, lng: 80.6480 },
+            { name: "Kozhikode Training Center", lat: 11.2588, lng: 75.7804 },
+            { name: "Kota Training Center", lat: 25.2130, lng: 75.8648 },
+            { name: "Bareilly Training Center", lat: 28.3673, lng: 79.4423 },
+            { name: "Thiruvananthapuram Training Center", lat: 8.5241, lng: 76.9366 },
+            { name: "Udaipur Training Center", lat: 24.5854, lng: 73.7125 },
+            { name: "Tirunelveli Training Center", lat: 8.7284, lng: 77.1073 },
+            { name: "Shimla Training Center", lat: 31.1048, lng: 77.1734 },
+            { name: "Bikaner Training Center", lat: 28.0224, lng: 73.3130 },
+            { name: "Sagar Training Center", lat: 23.4692, lng: 78.7357 },
+            { name: "Khandwa Training Center", lat: 22.1159, lng: 76.8774 },
+            { name: "Rourkela Training Center", lat: 22.2587, lng: 84.7868 },
+            { name: "Malappuram Training Center", lat: 11.1135, lng: 76.2024 },
+            { name: "Kolhapur Training Center", lat: 16.7065, lng: 74.2433 },
+            { name: "Durg Training Center", lat: 21.2042, lng: 81.2834 },
+            { name: "Bardhaman Training Center", lat: 23.0322, lng: 87.8646 },
+            { name: "Puducherry Training Center", lat: 11.9332, lng: 79.8290 },
+            { name: "Dimapur Training Center", lat: 25.9025, lng: 93.7268 },
+            { name: "Kohima Training Center", lat: 25.6739, lng: 94.1136 },
+            { name: "Itanagar Training Center", lat: 27.1026, lng: 93.6150 },
+            { name: "Gangtok Training Center", lat: 27.3359, lng: 88.6139 },
+            { name: "Aizawl Training Center", lat: 23.1645, lng: 92.9376 },
+            { name: "Imphal Training Center", lat: 24.8170, lng: 93.9368 },
+            { name: "Port Blair Training Center", lat: 11.6231, lng: 92.7265 },
+            { name: "Panchkula Training Center", lat: 30.6866, lng: 76.8540 },
+            { name: "Jammu Training Center", lat: 32.7266, lng: 74.8570 }
+        ];
+
+        // Create markers for each training center
+        var markers = [];
+        centers.forEach(function(center, index) {
+            var marker = L.marker([center.lat, center.lng], { icon: defaultIcon }).addTo(map)
+                .bindPopup(center.name);
+            markers.push(marker);
+            
+            // Add click event to the list item
+            document.getElementById('center-list').children[index].onclick = function() {
+                // Reset all markers to their default icon
+                markers.forEach(function(m) {
+                    m.setIcon(defaultIcon);
+                });
+                
+                // Highlight the clicked marker
+                marker.setIcon(highlightedIcon);
+                map.setView([center.lat, center.lng], 10); // Zoom in on the clicked location
+            };
+        });
+    </script>
+</body>
+</html>

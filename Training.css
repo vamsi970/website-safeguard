@@ -1,0 +1,531 @@
+*{
+    margin: 0px;
+}
+header{
+    background-color: white;
+}
+.topbox{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 21px;
+}
+.container-topbox{
+    height: 179px;
+    display: flex;
+    justify-content: flex-start;
+}
+.container-topbox .mainlogo{
+   padding-left: 70px;
+}
+
+.logo{
+    /* line-height: 105%; */
+    min-height: 90px;
+    padding: 30px 15px 30px 30px;
+    /* text-transform: uppercase; */
+}
+.text{
+   padding: 30px 30px 30px 0px;
+}
+.text strong{
+    font-size: 30px;
+}
+
+.text p{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.text span{
+    font-size: 25px; 
+}
+.maintext{
+   padding: 30px 30px 30px 0px;
+}
+.maintext strong{
+    font-size: 30px;
+}
+
+.maintext p{
+    font-size: 25px;
+}
+.maintext span{
+    font-size: 25px; 
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+.top-content{
+    width: 32%;
+    font-family: "Poppins", system-ui;
+    font-size: 15px;
+    padding: 50px 0px;
+}
+/* bo1 and bo2 for sidebox of PM Modi */
+.bo1{
+   border: 2px solid red;
+   width: 36px;
+}
+
+.bo2{
+    border: 2px solid red;
+    width: 36px;
+    }
+
+.insidebox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* after the line we have navbar */
+
+.btn a{
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+.line{
+    border: 2px solid black;
+    width: 99%;
+    display: flex;
+    margin: auto;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+   list-style: none;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-style: normal;
+    padding: 15px;
+  }
+  .navbar a{
+    text-decoration: none;
+  }
+   
+  .mainlogo > img{
+    padding-top: 15px;
+} 
+.mainlogo{
+    padding: 0px 15px 20px 0px;
+}
+.maintext > p{ 
+    padding-top: 10px;
+}
+
+/* Image style for content */
+.content {
+    background-image: url("/women_banner.jpg");
+    background-color: #f3675a;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;  
+    height: 400px;             
+    width: 100%;
+}
+
+.content h1{
+    margin: 30px;
+     font-family: "poppins";
+     font-size: 35px;
+     padding: 20px;
+     color: white;
+}
+
+.content li{
+    margin: 10px;
+     font-family: "poppins";
+     font-size: 22px;
+     color: white;
+}
+
+.btn{
+    padding: 15px 40px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    margin: 15px 0; /* Adjusting margin for better spacing */
+    display: block;
+    width: 300px;
+}
+
+.helpline-btn{
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "poppins";
+    color: white;
+    background-color: rgb(61, 151, 187);
+}
+
+
+.mid_content > h1{
+    font-style: bold;
+    font-size: 42px;
+    font-family: "poppins";
+    padding: 15px;
+}
+
+.mid_content p{
+    font-family: "poppins";  
+    font-size: 16px; 
+    padding: 15px;
+}
+
+/* cards style */
+
+.programs{
+    display: flex;
+    justify-content: space-around;
+}
+
+.left{
+    margin: 30px;
+    width: 50%;
+}
+.right{
+    margin: 30px;
+    width: 40%;
+}
+
+.right img{
+    padding-left: 50px;
+    object-fit: fill;
+    width: 500px;
+}
+
+.left h2{
+    padding: 10px;
+    font-size: 32px;
+    font-family: "poppins";
+}
+.left h4{
+    /* padding: 5px; */
+    font-family: "poppins";
+}
+.left p{
+    padding: 20px;
+    font-size: 16px;
+    font-family: "poppins";
+}
+
+.btns{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
+
+.helpline-btn1{
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "poppins";
+    color: white;
+    background-color: rgb(61, 151, 187);;
+}
+.helpline-btn2{
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "poppins";
+    color: white;
+    background-color: rgb(61, 151, 187);;
+}
+.programs li{
+    padding: 5px;
+    font-size: 16px;
+    font-family: "poppins";
+}
+
+.lower-content{
+    background-color: #e3ecf6;
+}
+
+.lower-content h1{
+    padding: 20px;
+    font-family: "poppins";
+    font-size: 32px;
+    text-align: center;
+}
+.lower-content p{
+    font-family: "poppins";
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.list{
+    display: flex;
+    padding: 20px;
+}
+
+.list-img{
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 40%;
+}
+.list-img h2{
+    text-align: center;
+    padding: 10px;
+    font-family: "poppins";
+    font-size: 28px;
+}
+.list-li{
+    margin: 90px 0px 10px 0px;
+    width: 60%;
+}
+.main_list{
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+    display: flex;
+}
+.list-img img{
+    border-radius: 10px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.list-li h2{
+    font-family: "poppins";
+    padding: 15px;
+}
+.main_list li{
+    font-size: 13px;
+    font-family: "poppins";
+}
+
+.endpart{
+    background-color: #f6e9e3;
+}
+.endpart h1{
+    padding: 30px;
+    text-align: center;
+    font-size: 32px;
+    font-family: "poppins";
+
+}
+
+/* cards styling */
+.card {
+    width: 350px; /* Set card width */
+    height: 350px; /* Set card height */
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Position relative to keep elements within the card */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the entire card */
+    transition: transform 0.5s ease; /* Smooth image movement */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Image styling */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image covers the container without any gaps */
+  }
+  
+  /* Text box */
+  .text-box {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding fits within the card */
+    position: absolute;
+    bottom: -100%; /* Hide text completely off-screen initially */
+    transition: bottom 0.5s ease; /* Smooth text movement */
+  }
+  
+  /* Hover effects */
+  .card:hover .image-container {
+    transform: translateY(-50px); /* Move the image upwards slightly */
+  }
+  
+  .card:hover .text-box {
+    bottom: 0; /* Bring text box fully into view */
+  }
+  
+  /* Card hover shadow effect */
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+  }
+
+  .cards{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .click1 button{
+    margin-left: 330px;
+
+  }
+
+  /* footer style from previous webpage build */
+  footer{
+    background-color: white;
+    border-radius: 20px;
+}
+.links{
+    transition: transform 0.5s ease;
+    line-height: 1.6;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0px;
+}
+.links img{
+    height: 30px;
+}
+#foot{
+    color: black;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    margin: 15px 0px;
+}
+
+/* ultra edit end */
+
+.first .bbtn1{
+    background-color: purple;
+    color: white;
+    padding: 12px;
+    /* margin: 40px; */
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.first .bbtn2{
+    background-color: white;
+    color: purple;
+    padding: 13px 24px;
+    /* margin: 40px; */
+    border: 3px solid purple;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button{
+    padding: 60px 0px;
+}
+
+.container > h3{
+    color: black;
+    position: relative;
+    right: -200px;
+    font-family: sans-serif;
+    font-size: 26px;
+}
+
+/* Form CSS from UE */
+.sec{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+}
+
+.sub{
+    width: 33%;
+    border-radius: 18px;
+    border: 3px solid white;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
+.sub > h2{
+   color: white;
+   font-size: 30px;
+   font-family: "Poppins";
+}
+
+#submit{
+    margin: 10px 0px;
+    color: white;
+    font-family: "Poppins";
+    padding: 15px 50px;
+    background-color: purple;
+    border-radius: 20px;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.form-input{
+    height: 30px;
+    width: 75%;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* footer-1 style sheet */
+
+.secondpart{
+    height: 180px;
+}
+
+.section-one ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 50px 0px;
+}
+
+.section-one > ul >a{
+    text-decoration: none;
+}
+
+.section-one li{
+    padding: 10px;
+    font-family: "poppins";
+    color: grey;
+   
+}
+
+#spl_logo{
+    border-radius: 110px;
+}
+
+.section-two{
+    display: flex;
+    justify-content: center;
+}
+
+.section-two img{
+    margin: 15px;
+}
+
+.links img:hover{
+    transform: scale(2, 2);
+    
+}
+
+
+
+
+

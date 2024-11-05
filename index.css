@@ -1,0 +1,638 @@
+*{
+    margin: 0px;
+}
+header{
+    background-color: white;
+}
+.topbox{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 21px;
+}
+.container-topbox{
+    height: 179px;
+    display: flex;
+    justify-content: flex-start;
+}
+.container-topbox .mainlogo{
+   padding-left: 70px;
+}
+
+.logo{
+    /* line-height: 105%; */
+    min-height: 90px;
+    padding: 30px 15px 30px 30px;
+    /* text-transform: uppercase; */
+}
+.text{
+   padding: 30px 30px 30px 0px;
+}
+.text strong{
+    font-size: 30px;
+}
+
+.text p{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.text span{
+    font-size: 25px; 
+}
+.maintext{
+   padding: 30px 30px 30px 0px;
+}
+.maintext strong{
+    font-size: 30px;
+}
+
+.maintext p{
+    font-size: 25px;
+}
+.maintext span{
+    font-size: 25px; 
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+.top-content{
+    width: 32%;
+    font-family: "Poppins", system-ui;
+    font-size: 15px;
+    padding: 50px 0px;
+}
+/* bo1 and bo2 for sidebox of PM Modi */
+.bo1{
+   border: 2px solid red;
+   width: 36px;
+}
+
+.bo2{
+    border: 2px solid red;
+    width: 36px;
+    }
+
+.insidebox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* after the line we have navbar */
+
+.line{
+    border: 2px solid black;
+    width: 99%;
+    display: flex;
+    margin: auto;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+   list-style: none;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-style: normal;
+    padding: 15px;
+  }
+  .navbar a{
+    text-decoration: none;
+  }
+   
+/* Making content box in middle*/
+
+.mainlogo > img{
+    padding-top: 15px;
+} 
+.mainlogo{
+    padding: 0px 15px 20px 0px;
+}
+.maintext > p{
+    padding-top: 10px;
+}
+
+.content{
+    /* background-image: url("/Real-Project/pictures/bg_slider.png"); */
+    background-color: #374176;
+    background-repeat: no-repeat;
+    height: 400px;
+    object-fit:contain;
+    background-position: center center;
+    background-size: max(1200px , 100vw);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* opacity: 0.7; */
+    
+}
+
+.content-left{
+    width: 40%;
+    height: 350px;
+    font-family: "poppins";
+    color: white;
+    background-color: #374176;
+    border-radius: 0px 35px;
+}
+#set h3{
+    text-align: center;
+}
+
+#net{
+    background-color: #374176;
+}
+#set :hover{
+    color: black;
+    background-color: #D4B4DC;
+    cursor: pointer;
+    border-radius: 15px;
+}
+#net:hover{
+    color: white;
+    background-color: purple;
+}
+
+.content-left > h4{
+    margin: 5px;
+    font-size: 22px;
+    margin-left: 30px;
+}
+.content-left > h1{
+    margin-left: 25px;
+}
+
+.set1,.set2{
+    display: flex;
+    margin: 25px 0px;
+    justify-content: space-around; 
+}
+
+
+
+.option_a{
+    border: 2px solid white;
+    width: 250px;
+    height: 35px;
+    border-radius: 22px;
+    transition: transform 0.5s ease;
+    line-height: 1.6;
+}
+
+.option_a:hover {
+    transform: scale(1.05, 1.05); /* Adjust scale for hover effect */
+}
+
+.option_b:hover {
+    transform: scale(1.05, 1.05); /* Adjust scale for hover effect */
+}
+
+.option_c:hover {
+    transform: scale(1.05, 1.05); /* Adjust scale for hover effect */
+}
+
+.option_d:hover {
+    transform: scale(1.05, 1.05); /* Adjust scale for hover effect */
+}
+.option_b{
+    border: 2px solid white;
+    width: 250px;
+    height: 35px;
+    border-radius: 22px;
+    transition: transform 0.5s ease;
+    line-height: 1.6;
+
+}
+.option_c{
+    border: 2px solid white;
+    width: 250px;
+    height: 35px;
+    border-radius: 22px;
+    transition: transform 0.5s ease;
+    line-height: 1.6;
+}
+
+.option_d {
+    border: 2px solid white;
+    width: 250px;
+    height: 35px;
+    border-radius: 22px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block; 
+    transition: transform 0.5s ease;
+    line-height: 1.6;
+}
+
+
+
+.content-slider {
+    width: 600px;
+    height: 400px; 
+    overflow: hidden; 
+}
+
+.slides {
+    display: flex;
+    width: calc(600px * 8);
+    animation: slide 80s infinite; 
+}
+
+.content-slider img {
+    width: 600px;
+    height: 400px; 
+    object-fit: cover; 
+    flex-shrink: 0; 
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    12.5% { transform: translateX(-600px); }  /* Move to 2nd image */
+    25% { transform: translateX(-1200px); }   /* Move to 3rd image */
+    37.5% { transform: translateX(-1800px); }  /* Move to 4th image */
+    50% { transform: translateX(-2400px); }   /* Move to 5th image */
+    62.5% { transform: translateX(-3000px); }  /* Move to 6th image */
+    75% { transform: translateX(-3600px); }   /* Move to 7th image */
+    87.5% { transform: translateX(-4200px); }  /* Move to 8th image */
+    100% { transform: translateX(0); }        /* Back to the 1st image */
+}
+/* middle-content  */
+
+.middle-content{
+    background-color: #f5f9fc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* first middle video player dialogue box */
+.first-mid {
+    position: relative;
+    display: inline-block;
+}
+
+.video-thumbnail {
+    position: relative;
+}
+.video-thumbnail:first-child{
+    width: 540px;
+}
+
+#thumbnail {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.play-button img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Dialog Styles */
+.dialog {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 80%;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: green;
+}
+
+/* 2nd mid style*/
+.second_mid{
+    text-overflow: ellipsis;
+    margin: 40px;
+    font-family: "poppins";
+    
+}
+.second_mid > p{
+    padding-top: 10px
+}
+
+/* 3rd mid Style */
+
+.third_mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.third_mid > img{
+    width: 20vw;
+    margin: 19px;
+    border-radius: 20px;
+}
+
+/* minsiter and all other data info */
+.data{
+    background-color: #f6e9e3;
+    display: flex;
+    height: 450px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.data > #box{
+     margin: 20px;
+
+}
+
+.box-left > .one{ 
+   width: 19vw;
+   margin: 20px;
+   padding: 5px;
+   background-color: #fb9a23;
+   font-family: "poppins";
+}
+
+.one h1{
+   text-align: center;
+   padding: 5px;
+}
+
+.one p{
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+}
+
+.box-left > .two{
+    width: 19vw;
+    margin: 20px;
+    padding: 5px;
+    background-color: #aeca20;
+    font-family: "poppins";
+}
+
+.two h1{
+   text-align: center;
+   padding: 5px;
+}
+
+.two p{
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+}
+
+.box-right > .one{
+   width: 19vw;
+   margin: 20px;
+   padding: 5px;
+   background-color: #de0b4e;
+   font-family: "poppins";
+}
+
+.box-right > .two{
+    width: 19vw;
+    margin: 20px;
+    padding: 5px;
+    background-color: #0fa9df;
+    font-family: "poppins";
+}
+
+.mid-info{
+    min-width: 60px;
+    min-height: 180px;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+    font-family: "poppins";
+}
+
+.mid-info > img{
+    border-radius: 20%;
+    margin-top: -25px;
+    padding: 5px;
+}
+
+.mid-info p,h2,h3{
+    padding: 2px;
+}
+
+/* firstpart is the map design */
+
+.firstpart{
+    display: flex;
+    justify-content: space-around;
+}
+.map{
+    width: 40%;
+    margin: 20px;
+}
+
+.textbox{
+    width: 40%;
+    margin: 20px;
+    font-family: "poppins";
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.textbox h1{
+    text-align: center;
+    text-wrap: wrap;
+}
+.textbox p{
+    font-size: 16px;
+    padding-top: 40px;
+}
+
+
+
+/* footer style */
+.firstpart{
+    background-color: #e3ecf6;
+}
+
+.secondpart{
+    height: 180px;
+}
+
+.section-one ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 50px 0px;
+}
+
+.section-one > ul >a{
+    text-decoration: none;
+}
+
+.section-one li{
+    padding: 10px;
+    font-family: "poppins";
+    color: grey;
+   
+}
+
+#spl_logo{
+    border-radius: 110px;
+}
+
+.section-two{
+    display: flex;
+    justify-content: center;
+}
+
+.section-two img{
+    margin: 15px;
+}
+
+/* map css */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px; /* Rounded corners */
+    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+h2 {
+    color: #333; /* Darker title color */
+}
+
+p {
+    color: #555; /* Text color for paragraph */
+    line-height: 1.5; /* Better line spacing */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.map-container > svg path:hover{
+    fill: #aeca20;
+    cursor: pointer;
+}
+
+
+
+.helpline-btn {
+    font-family: "poppins";
+    background-color: #374176;
+    color: white;
+    padding: 15px 30px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0; /* Adjusting margin for better spacing */
+    display: block;
+    width: 200px;
+}
+
+/* Dropdown content styling */
+.dropdown {
+    transition: transform 0.5s ease;
+    line-height: 1.6;
+    background-color: white;
+    display: none; /* Initially hidden */
+    position: absolute; /* Positioning for overlay effect */
+    top: 86%; /* Position it directly below the button */
+    left: 28%; /* Align to the left edge of the button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1000; /* Ensure it appears on top of other elements */
+}
+.option_d:hover .dropdown {
+    transform: scale(1.05, 1.05);
+    display: block; /* Show dropdown when hovering over the parent */
+}
+
+/* General modal card style */
+#state-modal {
+    position: absolute;
+    display: none; /* Initially hidden */
+    background-color: rgb(147, 198, 147); /* White background */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #482323; /* Light gray border */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it's on top of other content */
+    width: 250px; /* Fixed width for the card */
+    font-family: Arial, sans-serif; /* Clean, modern font */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+#state-modal h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #de0b4e;
+}
+
+#state-modal p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+#state-modal .info-item {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
